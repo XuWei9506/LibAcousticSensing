@@ -8,21 +8,19 @@ import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
+import androidx.core.app.ActivityCompat;
 import android.util.Log;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStreamWriter;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
-import java.util.jar.Manifest;
 
 /**
  * Created by eddyxd on 4/25/16.

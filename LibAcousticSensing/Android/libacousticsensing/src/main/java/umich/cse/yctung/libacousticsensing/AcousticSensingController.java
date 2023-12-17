@@ -6,7 +6,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
-import android.support.v4.app.ActivityCompat;
+import androidx.core.app.ActivityCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,10 +16,7 @@ import android.widget.Spinner;
 
 import com.google.gson.Gson;
 
-import java.util.ArrayDeque;
-import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 import java.util.Vector;
 

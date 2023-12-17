@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '25.0.0'
+    namespace = "umich.cse.yctung.devapp"
+    compileSdk 33
 
     defaultConfig {
         applicationId "umich.cse.yctung.devapp"
-        minSdkVersion 16
-        targetSdkVersion 24
+        minSdkVersion 31
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -28,8 +28,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile project(':libacousticsensing')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.google.android:android-test:4.1.1.4'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation project(':libacousticsensing')
 }

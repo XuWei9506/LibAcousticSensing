@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements AcousticSensingCo
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        sharedPref = getPreferences(Context.MODE_ENABLE_WRITE_AHEAD_LOGGING);
+        sharedPref = getPreferences(Context.MODE_PRIVATE);
 
         ass = new AcousticSensingSetting(this);
 
@@ -202,8 +202,8 @@ public class MainActivity extends AppCompatActivity implements AcousticSensingCo
         progressConnecting.setMessage("Connecting");
 
 
-        jc = new JNICallback();
-        jc.debugTest();
+        //jc = new JNICallback();
+        //jc.debugTest();
         asc = new AcousticSensingController(this, this);
     }
 
