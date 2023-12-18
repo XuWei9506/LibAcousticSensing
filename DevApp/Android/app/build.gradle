@@ -11,6 +11,17 @@ android {
         versionCode 1
         versionName "1.0"
 
+        externalNativeBuild {
+            ndkBuild {
+                targets "jni_callback"
+            }
+        }
+
+//        ndk {
+//            // Note sure why, but x86 will have a bug to compile
+//            abiFilters  'armeabi-v7a', 'arm64-v8a'
+//        }
+
         ndk {
             moduleName = "jni_callback" // module for standalone processing
             ldLibs "log"
@@ -23,6 +34,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        ndkBuild {
+            path 'src/main/jni/Android.mk'
         }
     }
 }
